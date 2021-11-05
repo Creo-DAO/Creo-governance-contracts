@@ -1,0 +1,26 @@
+{
+  "name": "creo-governor-contract",
+  "version": "1.0.0",
+  "description": "Creo Dao governor & timelock contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "dotenv": "^10.0.0",
+    "web3": "^1.6.0"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Creo-DAO"
+  },
+  "author": "Lanre Popson",
+  "license": "ISC"
+}
