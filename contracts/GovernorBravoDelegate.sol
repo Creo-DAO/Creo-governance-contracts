@@ -314,6 +314,16 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoE
 
 
     /**
+      * @notice Initiate the GovernorBravo contract
+      * @dev Admin only. Accepts admin over timelock. 
+      */
+    function _initiate() external {
+        require(msg.sender == admin, "GovernorBravo::_initiate: admin only");
+        timelock.acceptAdmin();
+    }
+
+
+    /**
       * @notice Begins transfer of admin rights. The newPendingAdmin must call `_acceptAdmin` to finalize the transfer.
       * @dev Admin function to begin change of admin. The newPendingAdmin must call `_acceptAdmin` to finalize the transfer.
       * @param newPendingAdmin New pending admin.
